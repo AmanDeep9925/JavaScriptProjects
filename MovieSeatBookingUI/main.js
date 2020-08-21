@@ -4,27 +4,65 @@ const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
+// * Populating the UI
+populateUI();
+
 let ticketPrice = parseInt(movieSelect.value);
 // console.log(typeof ticketPrice);
+
+// * Savig selected movie index and price
+
+const setMovieData = (movieIndex, moviePrice) => {
+    localStorage.setItem('selectedMovieIndex', movieIndex);
+    localStorage.setItem('selectedMoviePrice', moviePrice);
+};
 
 // * Updating the selected counts
 
 const updateSelectedCount = () => {
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
-    const selectedSeatsCount = selectedSeats.length;
 
+    // finding the indexs of the seat
+
+    const seatsIndex = [...selectedSeats].map((seat) => {
+        return [...seats].indexOf(seat);
+    });
+
+    // console.log(seatIndex);
+
+    localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+
+    const selectedSeatsCount = selectedSeats.length;
     count.innerText = selectedSeatsCount;
     total.innerText = selectedSeatsCount * ticketPrice;
+};
+
+function populateUI(){
+    // * will get data from localstorage and populate the UI
+    const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+    if (selectedSeats !== null && selectedSeats.length > 0) {
+        seats.forEach((seat, index) => {
+            if (selectedSeats.indexOf(index) > -1) {
+                seat.classList.add('selected');
+            }
+        });
+    }
+
+    const selectedMovieIndex = localStorage.getItem('selectedMovieIndex');
+    if (selectedMovieIndex != null) {
+        movieSelect.selectedIndex = selectedMovieIndex;
+    }
 };
 
 // * Adding eventlistener
 
 // * movie click event
 
-movieSelect.addEventListener('change',(e)=>{
+movieSelect.addEventListener('change', (e) => {
     ticketPrice = +e.target.value;
+    setMovieData(e.target.selectedIndex, e.target.value);
     updateSelectedCount();
-})
+});
 
 // * seat click event
 container.addEventListener('click', (e) => {
@@ -36,3 +74,5 @@ container.addEventListener('click', (e) => {
         updateSelectedCount();
     }
 });
+
+updateSelectedCount();
