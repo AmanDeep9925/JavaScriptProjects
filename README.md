@@ -8,6 +8,6 @@ A basic implementation of the form valiadation in JS 🚀.
 
 A basic implementation of movie ticket booking in JS 🔥.
 
-### Project 3 (Cusotm vVdeo Player)
+### Project 3 (Cusotm Video Player)
 
 A basic implementatio for custom video player in JS 📽.
