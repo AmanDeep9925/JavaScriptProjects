@@ -15,3 +15,7 @@ A basic implementatio for custom video player in JS 📽.
 ### Project 4 (Exchange Rate Calculator)
 
 Implementing an Exchange rate calculator in JS 💱.
+
+### Project 5 (DOM Array Methods | forEach, map, filter, sort, reduce)
+
+Understanding the DOM Array methods ✨.
