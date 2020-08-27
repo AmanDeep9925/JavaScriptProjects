@@ -19,3 +19,7 @@ Implementing an Exchange rate calculator in JS 💱.
 ### Project 5 (DOM Array Methods | forEach, map, filter, sort, reduce)
 
 Understanding the DOM Array methods ✨.
+
+### Project 6 (Menu Slider and Modal)
+
+Designing the Menu Slider and Modal 🚀
