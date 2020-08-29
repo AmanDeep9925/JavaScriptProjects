@@ -4,6 +4,7 @@
     --modal-duration: 1s;
     --primary-color: #0f3460;
     --secondary-color: #e94560;
+    --nav-width: 200px;
 }
 
 * {
@@ -13,6 +14,13 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
+    transition: transform 0.4s ease-in-out;
+}
+
+body.show-nav {
+    transform: translate(200px);
+    width: calc(100% - var(--nav-width));
+    transition: all 0.4s ease-in-out;
 }
 
 nav {
@@ -22,7 +30,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: var(--nav-width);
     height: 100vh;
     z-index: 100;
     transform: translateX(-100%);
@@ -116,7 +124,7 @@ button:focus {
 
 .modal-container {
     background-color: rgba(0, 0, 0, 0.6);
-    /* display: none; */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -124,64 +132,79 @@ button:focus {
     bottom: 0;
 }
 
+.modal-container.show-modal {
+    display: block;
+}
+
 .modal {
     background-color: #fff;
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     position: absolute;
-    overflow:hidden ;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+    animation-name: modalopen;
+    animation-duration: var(--modal-duration);
 }
 
-.modal-header{
+.modal-header {
     background-color: var(--primary-color);
-    color:white;
-    padding:15px;
+    color: white;
+    padding: 15px;
 }
 
-.modal-header h3{
-    margin:0;
+.modal-header h3 {
+    margin: 0;
 }
 
-.modal-content{
-    padding:20px;
+.modal-content {
+    padding: 20px;
 }
 
-.modal-form div{
-    margin:15px;
+.modal-form div {
+    margin: 15px;
 }
 
-.modal-form label{
-    display:block;
-    margin-bottom:5px;
-    font-size:15px;
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
 }
 
-.modal-form .form-input{
-    padding:8px;
-    width:100%;
+.modal-form .form-input {
+    padding: 8px;
+    width: 100%;
     border: 1.5px solid var(--primary-color);
-    border-radius:5px;
+    border-radius: 5px;
 }
 
-.modal-form .submit-btn{
-    padding:10px;
-    width:100%;
-    border-radius:5px;
-    font-size:18px;
-    margin-top:15px;
+.modal-form .submit-btn {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
-.close-btn{
-    background:transparent;
+.close-btn {
+    background: transparent;
     font-size: 20px;
-    position:absolute;
-    top:0;
-    right:0;
-    cursor:pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
