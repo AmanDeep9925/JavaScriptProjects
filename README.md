@@ -27,3 +27,7 @@ Designing the Menu Slider and Modal 🚀
 ### Project 7 (Hangman Game)
 
 Develpoing hangman game in vanilla JS 🎢
+
+### Project 8 (Meal Finder)
+
+Meal Finder API with MealDB. 🍽
