@@ -80,6 +80,7 @@ input[type='text'] {
     top: 0;
     left: 0;
     height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
@@ -109,6 +110,13 @@ input[type='text'] {
     margin: 20px;
     padding: 10px;
     border: 2px white dashed;
+    border-radius: 5px;
+}
+
+.main {
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 30px;
 }
 
 .single-meal p {
@@ -123,22 +131,39 @@ input[type='text'] {
 }
 
 .single-meal ul li {
-    border:1px solid #ededed;
-    border-radius:5px;
-    background-color:#ffffffd0;
-    display:inline-block;
-    color:#2d2013;
-    font-size:12px;
-    padding:5px;
-    margin:0 5px 5px 0;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    background-color: #ffffffd0;
+    display: inline-block;
+    color: #2d2013;
+    font-size: 12px;
+    padding: 5px;
+    margin: 0 5px 5px 0;
 }
 
 @media (max-width: 800px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 @media (max-width: 700px) {
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .meal {
+        height: 200px;
+        width: 200px;
+    }
 }
 @media (max-width: 500px) {
     input[type='text'] {
         width: 100%;
+    }
+    .meals {
+        grid-template-columns: 1fr;
+    }
+    .meal {
+        height: 300px;
+        width: 300px;
     }
 }
