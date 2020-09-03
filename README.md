@@ -30,4 +30,8 @@ Develpoing hangman game in vanilla JS 🎢
 
 ### Project 8 (Meal Finder)
 
-Meal Finder API with MealDB. 🍽
+Meal Finder API with MealDB 🍽
+
+### Project 9 (Personalized Expense Tracker)
+
+Developing an Expense Tracker 🧮
