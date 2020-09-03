@@ -8,15 +8,21 @@ const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
 
-const dummyTransaction = [
-    { id: 1, text: 'flower', amount: -200 },
-    { id: 2, text: 'Salary', amount: 20000 },
-    { id: 3, text: 'Book', amount: -400 },
-    { id: 4, text: 'Camera', amount: +40000 },
-];
+const localStorageTransactions = JSON.parse(
+    localStorage.getItem('transactions')
+);
 
-let transactions = dummyTransaction;
+// const dummyTransaction = [
+//     { id: 1, text: 'flower', amount: -200 },
+//     { id: 2, text: 'Salary', amount: 20000 },
+//     { id: 3, text: 'Book', amount: -400 },
+//     { id: 4, text: 'Camera', amount: +40000 },
+// ];
 
+let transactions =
+    localStorage.getItem('transactions') != null
+        ? localStorageTransactions
+        : [];
 // * Add Transaction
 
 function addTransaction(e) {
@@ -35,6 +41,7 @@ function addTransaction(e) {
 
         addTransactionDOM(transaction);
         updateValues();
+        updateLocalStorage();
         text.value = '';
         amount.value = '';
     }
@@ -73,6 +80,7 @@ function addTransactionDOM(transaction) {
 
 function removeTransaction(id) {
     transactions = transactions.filter((transaction) => transaction.id !== id);
+    updateLocalStorage();
     init();
 }
 
@@ -94,6 +102,12 @@ function updateValues() {
     balance.innerText = `₹${total}`;
     moneyMinus.innerText = `₹${expense}`;
     moneyPlus.innerText = `₹${income}`;
+}
+
+// Update loaclstorage
+
+function updateLocalStorage() {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
 }
 
 function init() {
