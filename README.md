@@ -35,3 +35,7 @@ Meal Finder API with MealDB 🍽
 ### Project 9 (Personalized Expense Tracker)
 
 Developing an Expense Tracker 🧮
+
+### Project 10 (Music Player)
+
+Developing a Music Player 🎶
