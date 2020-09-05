@@ -39,3 +39,7 @@ Developing an Expense Tracker 🧮
 ### Project 10 (Music Player)
 
 Developing a Music Player 🎶
+
+### Project 11 (Infinite Scroll Effect)
+
+Developing a infinite Pagination for fetched posts 📘
