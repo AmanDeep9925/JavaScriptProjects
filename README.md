@@ -43,3 +43,7 @@ Developing a Music Player 🎶
 ### Project 11 (Infinite Scroll Effect)
 
 Developing a infinite Pagination for fetched posts 📘
+
+### Project 12 (Typing Game)
+
+Developing a small typing game for the fun 💻
