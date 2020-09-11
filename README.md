@@ -47,3 +47,7 @@ Developing a infinite Pagination for fetched posts 📘
 ### Project 12 (Typing Game)
 
 Developing a small typing game for the fun 💻
+
+### Project 13 (Speech Text Reader)
+
+Developing a small app to understand the web speech API 🔈
