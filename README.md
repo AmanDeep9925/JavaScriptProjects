@@ -44,10 +44,14 @@ Developing a Music Player 🎶
 
 Developing a infinite Pagination for fetched posts 📘
 
-### Project 12 (Typing Game)
+### Project 12 (Typing Game)d
 
 Developing a small typing game for the fun 💻
 
 ### Project 13 (Speech Text Reader)
 
 Developing a small app to understand the web speech API 🔈
+
+### Project 14 (Cards UI)
+
+Developing a multi memory cards UI 🎴
