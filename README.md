@@ -55,3 +55,7 @@ Developing a small app to understand the web speech API 🔈
 ### Project 14 (Cards UI)
 
 Developing a multi memory cards UI 🎴
+
+### Projecct 15 (Lyrics Search App)
+
+Developing a lyric search app 📜
