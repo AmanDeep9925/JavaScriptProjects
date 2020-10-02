@@ -74,13 +74,14 @@ form button {
     border-radius: 10px;
     color: white;
     font-size: 16px;
-    padding: 11px 30px;
+    padding: 13px 30px;
+    border: 0;
 }
 
 .btn {
     background-color: #e79f02;
     border: 0;
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     padding: 4px 10px;
 }
