@@ -10,7 +10,7 @@ const API_URI = 'https://api.lyrics.ovh';
 async function searchSongs(term) {
     const res = await fetch(`${API_URI}/suggest/${term}`);
     const data = await res.json();
-    // console.log(data);
+    console.log(data);
     showData(data);
 }
 
@@ -67,7 +67,7 @@ async function getLyrics(artist, songTitle) {
         <span>
             ${lyrics}
         </span>
-    `
+    `;
 
     more.innerHTML = '';
 }
