@@ -59,3 +59,7 @@ Developing a multi memory cards UI 🎴
 ### Projecct 15 (Lyrics Search App)
 
 Developing a lyric search app 📜
+
+### Project 16 (Relaxer App)
+
+Developeing a Relaxer app with CSS/JS 😎.
