@@ -63,3 +63,7 @@ Developing a lyric search app 📜
 ### Project 16 (Relaxer App)
 
 Developeing a Relaxer app with CSS/JS 😎.
+
+### Project 17 (Break Out Game)
+
+Developing a Breakout game in Vanilla JS 🧱
