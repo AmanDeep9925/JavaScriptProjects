@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Expense Tracker</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <!-- Heading -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Heading -->
 
-        <h2>Expense Tracker</h2>
+    <h2>Expense Tracker</h2>
 
-        <!-- Main Container -->
+    <!-- Main Container -->
 
-        <div class="container">
-            <h4>Current Balance.</h4>
-            <h1 id="balance"><span>₹</span>0.00</h1>
+    <div class="container">
+      <h4>Current Balance.</h4>
+      <h1 id="balance"><span>₹</span>0.00</h1>
 
-            <!-- Container for the income and expense  -->
+      <!-- Container for the income and expense  -->
 
-            <div class="inc-exp-container">
-                <div>
-                    <h4>Income</h4>
-                    <p id="money-plus" class="money plus">
-                        <span>+ ₹</span>0.00
-                    </p>
-                </div>
-                <div>
-                    <h4>Expense</h4>
-                    <p id="money-minus" class="money minus">
-                        <span> - ₹ </span>0.00
-                    </p>
-                </div>
-            </div>
+      <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money plus"><span>+ ₹</span>0.00</p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-minus" class="money minus"><span> - ₹ </span>0.00</p>
+        </div>
+      </div>
 
-            <!-- Transaction history -->
+      <!-- Transaction history -->
 
-            <h4>History</h4>
+      <h4>History</h4>
 
-            <ul id="list" class="list">
-                <!-- <li class="mius">
+      <ul id="list" class="list">
+        <!-- <li class="mius">
                     Cash <span>-₹5000</span
                     ><button class="delete-btn">X</button>
                 </li> -->
-            </ul>
+      </ul>
 
-            <h3>Add new Transaction</h3>
-            <form id="form">
-                <div class="form-control">
-                    <label for="text">Text</label>
-                    <input type="text" id="text" placeholder="Enter Text..." />
-                </div>
-                <div class="form-control">
-                    <label for="amount"
-                        >Amount <br />
-                        (negative - expense, positive - income )</label
-                    >
-                    <input
-                        type="number"
-                        id="amount"
-                        placeholder="Enter Amount..."
-                    />
-                </div>
-                <button class="btn">Add Transaction</button>
-            </form>
+      <h3>Add new Transaction</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Text</label>
+          <input type="text" id="text" placeholder="Enter Text..." />
         </div>
+        <div class="form-control">
+          <label for="amount"
+            >Amount <br />
+            (negative - expense, positive - income )</label
+          >
+          <input type="number" id="amount" placeholder="Enter Amount..." />
+        </div>
+        <button class="btn">Add Transaction</button>
+      </form>
+    </div>
 
-        <script src="main.js"></script>
-    </body>
+    <script src="main.js"></script>
+  </body>
 </html>
