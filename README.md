@@ -63,3 +63,7 @@ Developing a lyric search app 📜
 ### Project 16 (Relaxer App)
 
 Developeing a Relaxer app with CSS/JS 😎.
+
+### Project 18 (new Year Countdown)
+
+Developing a countdonw timer for New year 🎊.
