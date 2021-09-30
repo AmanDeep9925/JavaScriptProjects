@@ -67,3 +67,7 @@ Developeing a Relaxer app with CSS/JS 😎.
 ### Project 17 (Break Out Game)
 
 Developing a Breakout game in Vanilla JS 🧱
+
+### Project 18 (new Year Countdown)
+
+Developing a countdonw timer for New year 🎊.
